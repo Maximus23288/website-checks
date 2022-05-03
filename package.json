@@ -1,0 +1,51 @@
+{
+  "name": "@website-checks/website-checks",
+  "version": "1.20.3",
+  "main": "index.js",
+  "description": "checks websites with multiple services",
+  "scripts": {
+    "test": "npm-run-all test:*",
+    "test:check-your-website": "node index.js google.com --check-your-website",
+    "test:crtsh": "node index.js google.com --crtsh",
+    "test:cryptcheck": "node index.js google.com --cryptcheck",
+    "test:hstspreload": "node index.js google.com --hstspreload",
+    "test:httpobservatory": "node index.js google.com --httpobservatory",
+    "test:lighthouse": "node index.js google.com --lighthouse",
+    "test:psi": "node index.js google.com --psi",
+    "test:securityheaders": "node google.com iana.org --securityheaders",
+    "test:ssllabs": "node index.js google.com --ssllabs",
+    "test:webbkoll": "node index.js google.com --webbkoll",
+    "test:webhint": "node index.js google.com --webhint",
+    "test:yellowlab": "node index.js google.com --yellowlab"
+  },
+  "bin": {
+    "website-checks": "./bin/website-checks.js"
+  },
+  "preferGlobal": true,
+  "keywords": [
+    "certificate",
+    "cryptcheck",
+    "hsts",
+    "hsts preload",
+    "http observatory",
+    "lighthouse",
+    "pagespeed insights",
+    "psi",
+    "security headers",
+    "sonarwhal",
+    "ssl decoder",
+    "ssllabs"
+  ],
+  "author": "LastLifeM",
+  "dependencies": {
+    "kleur": "4.0.2",
+    "puppeteer": "5.3.1"
+  },
+  "devDependencies": {
+    "hint": "^6.1.4",
+    "npm-run-all": "^4.1.5"
+  },
+  "engines": {
+    "node": ">=10.12.0"
+  }
+}
